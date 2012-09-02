@@ -32,10 +32,12 @@
 #import "CQMPathUtilities.h"
 
 
-#define kDefaultMaskColor  [UIColor colorWithWhite:0 alpha:0.5]
+#define kDefaultMaskColor  [UIColor colorWithWhite:0 alpha:0.3]
 #define kDefaultFrameColor [UIColor colorWithRed:0.10f green:0.12f blue:0.16f alpha:1.00f]
-#define kDefaultPortraitFrameSize  CGSizeMake(320 - 66, 460 - 66)
-#define kDefaultLandscapeFrameSize CGSizeMake(480 - 66, 300 - 66)
+//#define kDefaultPortraitFrameSize  CGSizeMake(320 - 66, 460 - 66)
+//#define kDefaultLandscapeFrameSize CGSizeMake(480 - 66, 300 - 66)
+#define kDefaultPortraitFrameSize  CGSizeMake(768 - 200, 1004 - 400)
+#define kDefaultLandscapeFrameSize CGSizeMake(1024 - 400, 748 - 200)
 #define kFramePadding      5.0f
 #define kRootKey           @"root"
 #define kShadowColor       [UIColor blackColor]
