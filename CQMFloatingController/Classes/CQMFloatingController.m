@@ -85,12 +85,20 @@
 		[self setPortraitFrameSize:kDefaultPortraitFrameSize];
 		[self setLandscapeFrameSize:kDefaultLandscapeFrameSize];
 		[self setFrameColor:kDefaultFrameColor];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(done)
+                                                     name:@"wmhdone"
+                                                   object:nil];
 	}
 	return self;
 }
 
+- (void)done {
+    [self dismissAnimated:YES];
+}
 
 - (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 	[contentViewController_ release];
 	[maskControl_ release];
 	[frameView_ release];
